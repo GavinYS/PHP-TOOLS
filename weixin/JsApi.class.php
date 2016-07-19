@@ -79,7 +79,7 @@ class JsApi {
 	 *	获取Access_Token方法,微信公众号后台规定7200秒刷新一次,为保证易用性,此方法5000秒重新获取一个Access_Token
 	 *	
 	 */
-	private function getAccessToken()
+	public function getAccessToken()
 	{
 		//从数据库中获取上一次的access_token,并判断是否过期,过期则重新获取一个
 		$last = $this->getLastAccessToken();
