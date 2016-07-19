@@ -1,5 +1,5 @@
 <?php
-require_once './functions.php';
+require_once 'functions.php';
 /**
  *	@author gavinys@gavinys.com
  *	@since 1.0
@@ -86,7 +86,7 @@ class JsApi {
 		if($last && (time() - $last['create_time']) < 5000) {
 			return $last['access_token'];
 		} else {
-			$url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={$this->appid}&secret={$this->secret}";
+			$url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={$this->appid}&secret={$this->secretid}";
 			$json = $this->curlMethod($url);
 			//尝试获取access_token
 			try {
